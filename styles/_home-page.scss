@@ -1,5 +1,5 @@
 .parallex {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -39,6 +39,19 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    .parallex {}
+    .parallex {
+        width: 1200px;
+        margin-left: calc(-600px + 50%);
+    }
+
+    #bg-back,
+    #bg-tree,
+    #bg-mount {
+        bottom: 0%;
+    }
+
+    #bg-clouds {
+        width: 120%;
+    }
 
 }
