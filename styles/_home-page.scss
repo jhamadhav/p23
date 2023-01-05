@@ -1,0 +1,44 @@
+.parallex {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#b189c5, #f98284, #ffca8c);
+
+    img {
+        display: inline-block;
+        width: 100%;
+        transform-origin: 50% 50%;
+    }
+}
+
+#bg-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+#bg-clouds {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#bg-back,
+#bg-tree,
+#bg-mount {
+    position: absolute;
+    bottom: -14%;
+    left: 0;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    .parallex {}
+
+}
