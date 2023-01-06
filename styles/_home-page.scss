@@ -7,6 +7,29 @@
     z-index: 1;
 }
 
+#ballon {
+    width: 80px;
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    z-index: 1;
+    animation: upDown 25s linear infinite;
+}
+
+@keyframes upDown {
+    0% {
+        top: 65%;
+    }
+
+    50% {
+        top: 45%;
+    }
+
+    100% {
+        top: 65%;
+    }
+}
+
 .wrapper {
     background: linear-gradient(#b189c5, #f98284, #ffca8c, #160920);
     width: 100vw;
