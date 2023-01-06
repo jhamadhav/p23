@@ -1,62 +1,60 @@
-.parallex {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+.bg {
     background: linear-gradient(#b189c5, #f98284, #ffca8c);
-
-    img {
-        display: inline-block;
-        width: 100%;
-        transform-origin: 50% 50%;
-    }
-}
-
-#bg-color {
+    width: 100vw;
+    height: 85vh;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
+}
+
+.wrapper {
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+    // margin-bottom: -30px;
+}
+
+.images {
+    display: inline-block;
     width: 100%;
-    z-index: 0;
+    transform-origin: 50% 50%;
+    z-index: 1;
 }
 
 #bg-clouds {
-    width: 80%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    width: 90%;
 }
 
-#bg-back,
+#bg-back {
+    margin-top: -10%;
+}
+
 #bg-tree,
 #bg-mount {
-    position: absolute;
-    bottom: -14%;
-    left: 0;
-    z-index: 1;
+    margin-top: -100%;
+}
+
+#bg-tree,
+#bg-mount {
+    transform: translateY(-4%);
 }
 
 @media only screen and (max-width: 1200px) {
-    .parallex {
+    .images {
         width: 1200px;
         margin-left: calc(-600px + 50%);
     }
 
-    #bg-back,
-    #bg-tree,
-    #bg-mount {
-        bottom: 0%;
-    }
-
     #bg-clouds {
-        width: 100%;
+        width: 1000px;
     }
 
-}
+    .bg {
+        height: 70vh;
+    }
 
-.clr {
-    width: 100vw;
-    height: 1000px;
-    background: #262626;
-    margin-top: 100vh;
+    #bg-tree {
+        display: none;
+    }
 }
