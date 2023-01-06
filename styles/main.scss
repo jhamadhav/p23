@@ -1,4 +1,4 @@
- @import "./home-page";
+ @import "./home-page", "./faq";
  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
  * {
@@ -12,6 +12,7 @@
  body {
      width: 100vw;
      background-color: #270f2a;
+     background: linear-gradient(#270f2a, #090418);
      overflow-x: hidden;
  }
 
