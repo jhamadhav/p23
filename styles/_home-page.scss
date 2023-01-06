@@ -100,11 +100,13 @@
     }
 
     p {
-        width: 98%;
-        max-width: 700px;
+        width: 100%;
+        max-width: 900px;
         padding: 30px;
         margin-bottom: 50px;
-        font-size: large;
+        font-size: x-large;
+        text-align: left;
+        line-height: 36px;
     }
 
 }
@@ -161,6 +163,10 @@
         }
     }
 
+    .about p {
+        font-size: large;
+        padding: 10px;
+    }
 }
 
 #bg-clouds {
