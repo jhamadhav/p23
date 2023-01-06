@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    color: #fff;
+    color: #EADDCE;
     text-align: left;
     transition-duration: 300ms;
 }
@@ -26,7 +26,7 @@
 }
 
 h1 {
-    color: #fff;
+    color: #EADDCE;
     width: 100%;
     padding: 10px;
     text-align: center;
@@ -46,7 +46,7 @@ h1 {
 
     &::after {
         content: "+";
-        color: #fff;
+        color: inherit;
         float: right;
         font-size: xx-large;
     }
@@ -72,7 +72,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
 
     img {
         width: 60px;
