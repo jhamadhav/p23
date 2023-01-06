@@ -133,5 +133,18 @@
     img {
         width: 20vw;
         max-width: 260px;
+        min-width: 160px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .tickets {
+        flex-direction: column;
+        gap: 80px;
+
+        img {
+            width: 40vw;
+            max-width: 300px;
+        }
     }
 }
