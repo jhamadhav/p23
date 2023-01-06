@@ -34,7 +34,7 @@
     background: linear-gradient(#b189c5, #f98284, #ffca8c, #160920);
     width: 100vw;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .images {
@@ -52,7 +52,10 @@
     margin-top: -10%;
 }
 
-#bg-tree,
+#bg-tree {
+    margin-top: -42%;
+}
+
 #bg-mount {
     margin-top: -100%;
 }
@@ -81,6 +84,7 @@
     color: #fff;
     font-size: 3rem;
     padding: 20px;
+    background: #30132f;
 }
 
 .about {
