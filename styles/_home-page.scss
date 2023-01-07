@@ -90,14 +90,15 @@
 .about {
     background: transparent;
     width: 100%;
-    color: #fff;
-    margin: 100px 2%;
+    color: #eaddce;
+    margin: 100px 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 20px;
+    font-family: 'Lato', sans-serif;
 
     div {
         font-size: xx-large;
@@ -105,28 +106,28 @@
 
     p {
         width: 100%;
-        max-width: 900px;
+        max-width: 1150px;
         padding: 30px;
         margin-bottom: 50px;
-        font-size: x-large;
-        text-align: left;
+        font-size: large;
+        text-align: center;
         line-height: 36px;
+        font-family: 'Lato', sans-serif;
     }
 
 }
 
 #z {
-    width: 50%;
+    width: 90%;
     position: absolute;
     z-index: -1;
 }
 
 #ellipse {
     position: absolute;
-    width: 50vw;
+    width: 70vw;
     z-index: -1;
 }
-
 
 .ticket-wrapper {
     width: 100%;
