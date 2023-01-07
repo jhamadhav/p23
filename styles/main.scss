@@ -6,7 +6,6 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-     overflow-x: hidden;
      font-family: 'Montserrat', sans-serif;
  }
 
@@ -16,6 +15,7 @@
      background: linear-gradient(#30132f, #30132f, #090418, #090418);
      overflow-x: hidden;
      color: #eaddce;
+     user-select: none;
  }
 
  html {

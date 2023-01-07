@@ -1,7 +1,7 @@
 var timeOut;
 
 class Item {
-    constructor(icon, link) {
+    constructor(icon, link, txt) {
         this.$element = $(document.createElement("a"));
         this.icon = icon;
         this.$element.attr("href", link)
@@ -9,6 +9,7 @@ class Item {
         this.$element.css("background-color", "transparent");
         var i = document.createElement("img");
         $(i).attr("src", `./../assets/images/menu/${icon}.svg`)
+        $(i).attr("title", txt)
         this.$element.append(i);
         this.prev = null;
         this.next = null;
@@ -38,6 +39,7 @@ class Item {
     }
 
     updatePosition() {
+        document.getElementById("menu-shadow").style.zIndex = 101
         anime({
             targets: this.$element[0],
             left: this.prev.$element.css("left"),
@@ -109,7 +111,7 @@ class Menu {
         let items = document.getElementsByClassName("item")
         let num = 60 * items.length
         let leftInfo = items[items.length - 1].style.left
-        leftInfo = Number(leftInfo.substr(0, leftInfo.length - 2))
+        leftInfo = Math.abs(Number(leftInfo.substr(0, leftInfo.length - 2)))
 
         this.status = "open";
         var current = this.first.next;
@@ -117,7 +119,7 @@ class Menu {
         var head = this.first;
         var sens = head.$element.css("left") < head.$element.css("right") ? 1 : -1;
         sens = 1
-        if (leftInfo + num >= window.innerWidth) {
+        if (leftInfo < num) {
             sens = -1
         }
         while (current != null) {
@@ -158,17 +160,20 @@ class Menu {
     }
 
 }
+
 document.getElementById("menu-shadow").onclick = () => {
     let elem = document.getElementsByClassName("item")
     let len = elem.length - 1
+
     document.getElementsByClassName("item")[len].style.top = 0;
     document.getElementsByClassName("item")[len].style.left = 0;
     menu.close()
+    document.getElementById("menu-shadow").style.zIndex = 90
 }
 
 var menu = new Menu("#myMenu");
-var item1 = new Item("menu");
-var item2 = new Item("home", "#home");
+var item1 = new Item("menu", "javascript:void(0)", "Drag me Daddy!");
+var item2 = new Item("home", "#home", "Home");
 var item3 = new Item("home");
 var item4 = new Item("home");
 // var item5 = new Item("link", "#64F592");

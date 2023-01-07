@@ -10,11 +10,7 @@ body {
 
 .center {
     position: fixed;
-    margin: auto;
-    top: 85%;
-    right: 0;
-    bottom: 0;
-    left: -94%;
+    z-index: 100;
 }
 
 .menu {
@@ -37,6 +33,7 @@ body {
     justify-content: space-around;
     align-items: center;
     border: none;
+    z-index: 101;
 }
 
 .menu {
@@ -44,5 +41,31 @@ body {
         cursor: pointer;
         width: 100%;
         color: #222222;
+    }
+}
+
+#menu-shadow {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: #efefef;
+    opacity: .2;
+    border-radius: 50%;
+}
+
+.center,
+#menu-shadow {
+    bottom: 4vh;
+    right: 2vw;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 950px) {
+
+    .center,
+    #menu-shadow {
+        bottom: 5vh;
+        right: 8vw;
+        cursor: pointer;
     }
 }
