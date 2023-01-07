@@ -172,7 +172,7 @@ document.getElementById("menu-shadow").onclick = () => {
 }
 
 var menu = new Menu("#myMenu");
-var item1 = new Item("menu", "javascript:void(0)", "Drag me Daddy!");
+var item1 = new Item("menu", "javascript:void(0)", "Drag me..!");
 var item2 = new Item("home", "#home", "Home");
 var item3 = new Item("home");
 var item4 = new Item("home");
