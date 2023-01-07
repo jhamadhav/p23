@@ -53,7 +53,7 @@
 }
 
 #bg-tree {
-    margin-top: -42%;
+    margin-top: -44%;
 }
 
 #bg-mount {
@@ -84,14 +84,16 @@
     color: #fff;
     font-size: 3rem;
     padding: 20px;
-    background: #30132f;
+    background: linear-gradient(#30132f, #2e122e);
+    background: transparent;
+    margin: 0;
 }
 
 .about {
     background: transparent;
     width: 100%;
     color: #eaddce;
-    margin: 100px 0;
+    margin: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -190,4 +192,8 @@
     100% {
         margin-left: 0;
     }
+}
+
+#bg-tree {
+    margin-bottom: -10px;
 }

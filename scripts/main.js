@@ -7,5 +7,5 @@ window.onscroll = () => {
     // console.log(val);
     bg.style.marginBottom = val * 0.25 + "px"
     mount.style.marginBottom = val * 0.4 + "px"
-    tree.style.marginBottom = val * 0.5 + "px"
+    // tree.style.marginBottom = val * 0.96 + "px"
 }
