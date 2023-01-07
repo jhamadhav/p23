@@ -9,25 +9,17 @@ body {
 }
 
 .center {
-    position: absolute;
+    position: fixed;
     margin: auto;
-    top: 0;
+    top: 85%;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: -94%;
 }
 
 .menu {
     width: 40px;
     height: 40px;
-    // width: 100%;
-    // background: cyan;
-}
-
-.title {
-    width: 300px;
-    height: 10px;
-    top: 60px;
 }
 
 .item {
@@ -44,7 +36,6 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    // padding: 10px;
     border: none;
 }
 

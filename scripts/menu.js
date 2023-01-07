@@ -106,11 +106,20 @@ class Menu {
     }
 
     open() {
+        let items = document.getElementsByClassName("item")
+        let num = 60 * items.length
+        let leftInfo = items[items.length - 1].style.left
+        leftInfo = Number(leftInfo.substr(0, leftInfo.length - 2))
+
         this.status = "open";
         var current = this.first.next;
         var iterator = 1;
         var head = this.first;
         var sens = head.$element.css("left") < head.$element.css("right") ? 1 : -1;
+        sens = 1
+        if (leftInfo + num >= window.innerWidth) {
+            sens = -1
+        }
         while (current != null) {
             anime({
                 targets: current.$element[0],
@@ -148,6 +157,13 @@ class Menu {
         }
     }
 
+}
+document.getElementById("menu-shadow").onclick = () => {
+    let elem = document.getElementsByClassName("item")
+    let len = elem.length - 1
+    document.getElementsByClassName("item")[len].style.top = 0;
+    document.getElementsByClassName("item")[len].style.left = 0;
+    menu.close()
 }
 
 var menu = new Menu("#myMenu");
