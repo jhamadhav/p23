@@ -174,8 +174,8 @@ document.getElementById("menu-shadow").onclick = () => {
 var menu = new Menu("#myMenu");
 var item1 = new Item("menu", "javascript:void(0)", "Drag me..!");
 var item2 = new Item("home", "#home", "Home");
-var item3 = new Item("home");
-var item4 = new Item("home");
+var item3 = new Item("home", "./event.html", "Event Page");
+var item4 = new Item("home", "./registration.html", "Registration");
 // var item5 = new Item("link", "#64F592");
 
 menu.add(item1);
