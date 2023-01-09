@@ -21,6 +21,7 @@ body {
     // background: cyan;
     padding: 40px;
     transition-duration: 200ms;
+    margin-top: 50px;
 }
 
 #display-img {
@@ -59,12 +60,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 30px;
+    margin-top: 100px;
     margin-left: -20px;
 
     img {
-        width: 20%;
-        max-width: 150px;
+        width: 30%;
+        max-width: 160px;
         border-radius: 10px;
         cursor: pointer;
         transition-duration: 300ms;
@@ -181,7 +182,7 @@ body {
     }
 
     .carousal img {
-        width: 18%;
+        width: 22%;
     }
 
     #display-img {
