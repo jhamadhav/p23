@@ -6,6 +6,9 @@ body {
     background: #0F2027;
     background: -linear-gradient(to right, #2C5364, #203A43, #0F2027);
     transition-duration: 200ms;
+    background: url("./../assets/images/event/event-bg.png");
+    background-size: 100%;
+    background-repeat: repeat;
 }
 
 #display {
@@ -63,7 +66,7 @@ body {
         margin-right: -40px;
 
         &:hover {
-            transform: translateY(-10%);
+            transform: translateY(-20%);
         }
     }
 }
