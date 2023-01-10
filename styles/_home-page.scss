@@ -1,10 +1,21 @@
-#main-logo {
-    width: 80px;
-    padding: 16px;
+#rcoem-logo {
+    width: 20%;
+    max-width: 180px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    padding: 16px;
+}
+
+#src-logo {
+    width: 20%;
+    max-width: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 16px;
 }
 
 #ballon {
@@ -76,17 +87,15 @@
 }
 
 .plogo {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    color: #fff;
-    font-size: 3rem;
-    padding: 20px;
     background: linear-gradient(#30132f, #2e122e);
     background: transparent;
-    margin: 0;
+    margin-top: -160px;
+    margin-bottom: -100px;
 }
 
 .about {
