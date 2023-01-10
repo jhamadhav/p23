@@ -21,7 +21,7 @@
 #ballon {
     width: 80px;
     position: absolute;
-    top: 55%;
+    top: 55vh;
     left: 35%;
     z-index: 1;
     animation: upDown 25s linear infinite;
@@ -82,7 +82,8 @@
     }
 
     #bg-tree {
-        display: none;
+        margin-top: -130%;
+        // display: none;
     }
 }
 
@@ -94,8 +95,12 @@
     align-items: center;
     background: linear-gradient(#30132f, #2e122e);
     background: transparent;
-    margin-top: -160px;
-    margin-bottom: -100px;
+    padding: 0;
+
+    img {
+        width: 100%;
+        max-width: 1100px;
+    }
 }
 
 .about {
