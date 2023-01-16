@@ -175,7 +175,7 @@ var menu = new Menu("#myMenu");
 var item1 = new Item("menu", "javascript:void(0)", "Menu: Drag me..!");
 var item2 = new Item("home", "./index.html", "Home");
 var item3 = new Item("event", "./event.html", "Event Page");
-var item4 = new Item("registration", "./registration.html", "Registration");
+// var item4 = new Item("registration", "./registration.html", "Registration");
 var item5 = new Item("about", "./about.html", "About");
 var item6 = new Item("dev", "./dev.html", "Developers");
 // var item5 = new Item("link", "#64F592");
@@ -183,7 +183,7 @@ var item6 = new Item("dev", "./dev.html", "Developers");
 menu.add(item1);
 menu.add(item2);
 menu.add(item3);
-menu.add(item4);
+// menu.add(item4);
 menu.add(item5);
 menu.add(item6);
 $(document).delay(50).queue(function (next) {
