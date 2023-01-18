@@ -685,3 +685,9 @@ img {
 .prev {
   left: -50px;
 }
+
+@media only screen and (max-width: 700px) {
+  .flipbook-wrap {
+    display: none;
+  }
+}
