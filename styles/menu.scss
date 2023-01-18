@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
-$itemSize: 60px;
+$itemSize: 50px;
 
 body {
     background-color: #222222;
@@ -34,6 +34,7 @@ body {
     align-items: center;
     border: none;
     z-index: 101;
+    transform: scale(1.4);
 }
 
 .menu {
@@ -67,5 +68,12 @@ body {
         bottom: 5vh;
         right: 8vw;
         cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .item {
+        transform: scale(1);
     }
 }

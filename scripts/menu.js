@@ -123,9 +123,13 @@ class Menu {
             sens = -1
         }
         while (current != null) {
+            let num = 74
+            if (window.innerWidth < 650) {
+                num = 51
+            }
             anime({
                 targets: current.$element[0],
-                left: parseInt(head.$element.css("left"), 10) + (sens * (iterator * 64)),
+                left: parseInt(head.$element.css("left"), 10) + (sens * (iterator * num)),
                 top: head.$element.css("top"),
                 duration: 500
             });
@@ -175,15 +179,17 @@ var menu = new Menu("#myMenu");
 var item1 = new Item("menu", "javascript:void(0)", "Menu: Drag me..!");
 var item2 = new Item("home", "./index.html", "Home");
 var item3 = new Item("event", "./event.html", "Event Page");
-// var item4 = new Item("registration", "./registration.html", "Registration");
+var item4 = new Item("celeb", "./celeb.html", "Celebrity Page");
 var item5 = new Item("about", "./about.html", "About");
 var item6 = new Item("dev", "./dev.html", "Developers");
+var item7 = new Item("theme", "./theme.html", "Theme");
 // var item5 = new Item("link", "#64F592");
 
 menu.add(item1);
 menu.add(item2);
 menu.add(item3);
-// menu.add(item4);
+menu.add(item4);
+menu.add(item7);
 menu.add(item5);
 menu.add(item6);
 $(document).delay(50).queue(function (next) {
