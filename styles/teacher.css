@@ -141,6 +141,44 @@ img {
   width: 30em;
 }
 
+.jrs_src {
+  text-align: center;
+  width: 95%;
+  align-items: center;
+  justify-items: center;
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+  margin: 1em;
+}
+.jrs_src h2 {
+  font-weight: 900;
+  margin-bottom: 0.5em;
+}
+.jrscont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.names_cont {
+  width: 57vh;
+
+  font-weight: 500;
+  /* margin-top: 1em; */
+  margin-bottom: 4em;
+}
+
+.names_cont div {
+  font-size: 1.6em;
+  margin-top: 1.2em;
+}
+.names_cont div p {
+  font-size: 0.61em;
+  font-weight: 300;
+  width: 40vh;
+  margin: auto;
+}
+
 .srcpara {
   width: 42em;
   text-align: left;
