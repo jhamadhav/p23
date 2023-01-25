@@ -75,8 +75,8 @@ const makeCards = () => {
             <a class="register" target="_blank" rel="noopener noreferrer" href="${events[i]["link"]}"> Register </a>
             <div class="card-details">
                 <div class="event-title">${events[i]["name"]}</div>
-                <div class="event-date"> Date: ">${events[i]["date"]}</div>
-                <div class="event-about">">${events[i]["about"]}</div>
+                <div class="event-date"> Date: "${events[i]["date"]}</div>
+                <div class="event-about">"${events[i]["about"]}"</div>
             </div>
         </div>
         `
