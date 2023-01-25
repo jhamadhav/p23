@@ -50,7 +50,7 @@ const makeCards = () => {
     for (let i = 0; i < events.length; ++i) {
         cnt += `
         <div class="card">
-            <a class="register" href="${events[i]["link"]}"> Register </a>
+            <a class="register" target="_blank" rel="noopener noreferrer" href="${events[i]["link"]}"> Register </a>
             <div class="card-details">
                 <div class="event-title">${events[i]["name"]}</div>
                 <div class="event-date"> Date: ">${events[i]["date"]}</div>
