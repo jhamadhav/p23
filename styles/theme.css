@@ -36,9 +36,14 @@
   margin: 2em;
   width: 40em;
 }
+
 @media (max-width: 450px) {
   * {
     overflow-x: hidden;
+  }
+
+  .center {
+    overflow: initial;
   }
 }
 
