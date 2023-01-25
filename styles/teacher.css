@@ -1,15 +1,12 @@
-/* .teachers {
-  display: grid;
-  gap: 2em;
-  padding: 5em 4em;
-} */
-
 .teacher1 {
   display: flex;
   flex-wrap: wrap;
 
   justify-content: space-evenly;
   margin: 3.1em;
+}
+.incharge {
+  margin: 4em 2em;
 }
 
 .teacher_info {
@@ -37,16 +34,16 @@
   margin: auto;
 }
 /* .teachers{
-  display: block;
-  gap: 2em;
-  padding: 5em 4em;
-}
-
-.teacher1{
-  display: grid;
-  grid-template-columns: auto,minmax(100px,1fr);
-  gap: 2em;
-} */
+    display: block;
+    gap: 2em;
+    padding: 5em 4em;
+  }
+  
+  .teacher1{
+    display: grid;
+    grid-template-columns: auto,minmax(100px,1fr);
+    gap: 2em;
+  } */
 
 .teacher_info {
   background-color: rgb(255, 255, 255 / 0.2);
