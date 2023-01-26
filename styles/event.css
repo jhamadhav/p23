@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@
 
 html {
   overflow-x: hidden;
+  color: white;
 }
 
 ::-webkit-scrollbar {
@@ -101,6 +103,7 @@ body {
   gap: 10px;
   margin-top: 100px;
 }
+
 .carousal img {
   width: 25%;
   max-width: 150px;
@@ -110,6 +113,7 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   margin-right: -75px;
 }
+
 .carousal img:hover {
   transform: translateY(-20%);
 }
@@ -146,6 +150,7 @@ body {
   flex-grow: 1;
   margin: 0;
 }
+
 .card img {
   width: 100%;
   max-width: 300px;
@@ -165,9 +170,11 @@ body {
   background: #fff;
   color: #262626;
 }
+
 .register:hover {
   transform: scale(0.9);
 }
+
 .register:active {
   transform: scale(0.85);
 }
@@ -180,14 +187,17 @@ body {
   font-size: small;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
+
 .card-details .event-title {
   font-size: large;
   margin-bottom: 4px;
 }
+
 .card-details .event-date {
   font-size: small;
   margin-bottom: 6px;
 }
+
 .card-details .event-about {
   width: 100%;
   max-height: 140px;
@@ -199,18 +209,24 @@ body {
     flex-direction: column;
     padding: 10px;
   }
+
   #display-detail {
     width: 85%;
   }
+
   .carousal img {
     width: 22%;
   }
+
   #display-img {
     margin-bottom: 20px;
   }
 }
+
 @media only screen and (max-width: 400px) {
   .carousal {
     display: none;
   }
-}/*# sourceMappingURL=event.css.map */
+}
+
+/*# sourceMappingURL=event.css.map */

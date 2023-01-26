@@ -12,11 +12,35 @@ const showDetail = (i) => {
     carImg[i].style.transform = "translateY(-20%)"
 
 }
+
+const compTime = (a, b) => {
+    let ta = new Date(a["time"])
+    ta = ta.getTime()
+
+    let tb = new Date(b["time"])
+    tb = tb.getTime()
+
+    if (ta >= tb) {
+        return 1;
+    }
+    if (ta < tb) {
+        return -11;
+    }
+    return 0;
+}
 const makeCarousal = () => {
     let carousalDiv = document.getElementsByClassName("carousal")[0]
 
+    events.sort(compTime)
     let imgs = "";
-    for (let i = 0; i < events.length; ++i) {
+    for (let i = 0, count = 0; i < events.length && count < 5; ++i) {
+        let ta = new Date(events[i]["time"])
+        ta = ta.getTime()
+        if (Date.now() <= ta) {
+            count++
+        } else {
+            continue
+        }
         imgs += `<img class="carousal-img" src="./assets/images/event/${events[i]["image"]}" alt="${events[i]["name"]}-thumbnail">`
     }
     carousalDiv.innerHTML = imgs
@@ -30,8 +54,6 @@ const makeCarousal = () => {
             showDetail(i)
         })
     }
-
-
 }
 
 /*
@@ -53,8 +75,8 @@ const makeCards = () => {
             <a class="register" target="_blank" rel="noopener noreferrer" href="${events[i]["link"]}"> Register </a>
             <div class="card-details">
                 <div class="event-title">${events[i]["name"]}</div>
-                <div class="event-date"> Date: ">${events[i]["date"]}</div>
-                <div class="event-about">">${events[i]["about"]}</div>
+                <div class="event-date"> Date: "${events[i]["date"]}</div>
+                <div class="event-about">"${events[i]["about"]}"</div>
             </div>
         </div>
         `
