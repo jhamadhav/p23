@@ -88,6 +88,7 @@ const makeCards = () => {
     for (let i = 0; i < events.length; ++i) {
         cards[i].style.background = `url("./../assets/images/event/${events[i]["image"]}")`
         cards[i].style.backgroundPosition = "center"
+        cards[i].style.backgroundSize = "cover";
 
         cards[i].addEventListener("click", () => {
             showDetail(i)
