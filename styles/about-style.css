@@ -7,6 +7,8 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+
+
 a {
   color: #f82249;
   text-decoration: none;
@@ -411,7 +413,7 @@ h6 {
 }
 
 #speakers .speaker .details .social {
-  height: 40px;
+  height: 33px;
 }
 
 #speakers .speaker .details .social i {

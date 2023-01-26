@@ -13,6 +13,7 @@
 .block3 {
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
   justify-content: space-evenly;
   place-items: center;
   padding: 0.2% none;
@@ -33,7 +34,7 @@
 }
 
 .img-container {
-  margin: 2em;
+  margin: 2em none;
   width: 40em;
 }
 @media (max-width: 450px) {
