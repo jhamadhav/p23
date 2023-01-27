@@ -1,15 +1,10 @@
 const showDetail = (i) => {
+
     document.getElementById("display-img").src = `./assets/images/event/${events[i]["image"]}`
     document.getElementById("display-title").innerText = events[i]["name"]
     document.getElementById("display-about").innerText = events[i]["about"]
     document.getElementById("display-date").innerText = `Date: ${events[i]["date"]}`
     document.getElementById("display-register").href = events[i]["link"]
-
-    let carImg = document.getElementsByClassName("carousal-img")
-    for (let j = 0; j < carImg.length; ++j) {
-        carImg[j].style.transform = ""
-    }
-    carImg[i].style.transform = "translateY(-20%)"
 
 }
 
@@ -31,8 +26,8 @@ const compTime = (a, b) => {
 const makeCarousal = () => {
     let carousalDiv = document.getElementsByClassName("carousal")[0]
 
-    events.sort(compTime)
     let imgs = "";
+    let arr = []
     for (let i = 0, count = 0; i < events.length && count < 5; ++i) {
         let ta = new Date(events[i]["time"])
         ta = ta.getTime()
@@ -42,16 +37,17 @@ const makeCarousal = () => {
             continue
         }
         imgs += `<img class="carousal-img" src="./assets/images/event/${events[i]["image"]}" alt="${events[i]["name"]}-thumbnail">`
+        arr.push(i)
     }
     carousalDiv.innerHTML = imgs
 
     let carImg = document.getElementsByClassName("carousal-img")
     for (let i = 0; i < carImg.length; ++i) {
         carImg[i].addEventListener("click", () => {
-            showDetail(i)
+            showDetail(arr[i])
         })
         carImg[i].addEventListener("mouseover", () => {
-            showDetail(i)
+            showDetail(arr[i])
         })
     }
 }
@@ -97,6 +93,7 @@ const makeCards = () => {
 }
 
 window.onload = () => {
+    events = events.sort(compTime)
     makeCarousal()
     makeCards()
 }

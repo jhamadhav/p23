@@ -143,7 +143,7 @@ let events = [
         "date": "30th Jan, 2023",
         "time": "2023-01-30",
         "about": "Where words are brewed to produce fine elixir of sentiments, immersing you  into a world of poems, stories and chronicles",
-        "image": "event1.png",
+        "image": "litFest.jpg",
         "link": "https://rcoem.in/anon_evForm.htm?ev=1900"
     },
 ]
