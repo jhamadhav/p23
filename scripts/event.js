@@ -1,3 +1,4 @@
+let extraTime = 20 * 60 * 60 * 1000
 const showDetail = (i) => {
 
     document.getElementById("display-img").src = `./assets/images/event/${events[i]["image"]}`
@@ -7,7 +8,7 @@ const showDetail = (i) => {
 
     let tempLink = events[i]["link"]
     let ta = new Date(events[i]["time"])
-    ta = ta.getTime()
+    ta = ta.getTime() + extraTime
     if (Date.now() > ta) {
         tempLink = "https://www.instagram.com/rcoem.src/"
     }
@@ -37,7 +38,7 @@ const makeCarousal = () => {
     let arr = []
     for (let i = 0, count = 0; i < events.length && count < 5; ++i) {
         let ta = new Date(events[i]["time"])
-        ta = ta.getTime()
+        ta = ta.getTime() + extraTime
         if (Date.now() <= ta) {
             count++
         } else {
@@ -75,7 +76,7 @@ const makeCards = () => {
     for (let i = 0; i < events.length; ++i) {
         let tempLink = events[i]["link"]
         let ta = new Date(events[i]["time"])
-        ta = ta.getTime()
+        ta = ta.getTime() + extraTime
         if (Date.now() > ta) {
             tempLink = "https://www.instagram.com/rcoem.src/"
         }
