@@ -4,7 +4,14 @@ const showDetail = (i) => {
     document.getElementById("display-title").innerText = events[i]["name"]
     document.getElementById("display-about").innerText = events[i]["about"]
     document.getElementById("display-date").innerText = `Date: ${events[i]["date"]}`
-    document.getElementById("display-register").href = events[i]["link"]
+
+    let tempLink = events[i]["link"]
+    let ta = new Date(events[i]["time"])
+    ta = ta.getTime()
+    if (Date.now() > ta) {
+        tempLink = "https://www.instagram.com/rcoem.src/"
+    }
+    document.getElementById("display-register").href = tempLink
 
 }
 
@@ -66,9 +73,15 @@ const makeCards = () => {
 
     let cnt = ""
     for (let i = 0; i < events.length; ++i) {
+        let tempLink = events[i]["link"]
+        let ta = new Date(events[i]["time"])
+        ta = ta.getTime()
+        if (Date.now() > ta) {
+            tempLink = "https://www.instagram.com/rcoem.src/"
+        }
         cnt += `
         <div class="card">
-            <a class="register" target="_blank" rel="noopener noreferrer" href="${events[i]["link"]}"> Register </a>
+            <a class="register" target="_blank" rel="noopener noreferrer" href="${tempLink}"> Register </a>
             <div class="card-details">
                 <div class="event-title">${events[i]["name"]}</div>
                 <div class="event-date"> Date: "${events[i]["date"]}</div>
